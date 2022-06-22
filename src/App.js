@@ -1,7 +1,22 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
+import NoMatch from "./routes/NoMatch";
+import Welcome from "./routes/Welcome";
+import Login from "./routes/Login";
+import SignUp from "./routes/SignUp";
+
 function App() {
-  return <div className="app"></div>;
+  return (
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
