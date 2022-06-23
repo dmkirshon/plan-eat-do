@@ -47,3 +47,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Thanks to the following resources for inspiration:
 https://www.mealime.com/
 https://www.platejoy.com/
+
+Icons/images used:
+
+- <a target="_blank" href="https://icons8.com/icon/18956/peas">Peas</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+- Welcome Image by Polina Tankilevitch: [link](https://www.pexels.com/photo/hawaiian-dish-in-white-paper-bowls-4828210/)
