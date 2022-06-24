@@ -5,6 +5,7 @@ import NoMatch from "./routes/NoMatch";
 import Welcome from "./routes/Welcome";
 import Login from "./routes/Login";
 import SignUp from "./routes/SignUp";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

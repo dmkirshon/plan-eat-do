@@ -36,6 +36,7 @@ This project is an imitation attempt of two popular meal prep apps, mealime and 
 
 - React
 - React Route
+- FontAwesome via React
 - Jest
 - Firestore Database
 - Firebase Cloud Storage
