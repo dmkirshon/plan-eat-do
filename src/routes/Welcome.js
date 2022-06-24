@@ -1,6 +1,5 @@
 import React from "react";
 import NavWelcome from "../components/NavWelcome";
-
 const Welcome = () => {
   return (
     <div className="welcome">
@@ -17,89 +16,99 @@ const Welcome = () => {
         </section>
         <section className="welcome-perks">
           <div>
-            <img />
-            <h3>Perk 1</h3>
-            <p>
+            <div className="welcome-perk-icon">🍽️</div>
+            <h3 className="welcome-perk-heading">Menu Planning</h3>
+            <p className="welcome-perk-description">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
               velit.
             </p>
           </div>
           <div>
-            <img />
-            <h3>Perk 2</h3>
-            <p>
+            <div className="welcome-perk-icon">🗒️</div>
+            <h3 className="welcome-perk-heading">Grocery Lists</h3>
+            <p className="welcome-perk-description">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
               velit.
             </p>
           </div>
           <div>
-            <img />
-            <h3>Perk 3</h3>
-            <p>
+            <div className="welcome-perk-icon">🥙</div>
+            <h3 className="welcome-perk-heading">Custom Recipes</h3>
+            <p className="welcome-perk-description">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde,
               velit.
             </p>
           </div>
         </section>
         <section className="welcome-reviews">
-          <h2></h2>
-          <ul>
-            <li>
-              <div>stars</div>
-              <blockquote>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                vel maiores dicta tempore ullam dolorum ipsum iste, molestiae
-                tempora doloremque?
-              </blockquote>
-              <div>Customer Name</div>
-            </li>
-            <li>
-              <div>stars</div>
-              <blockquote>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                vel maiores dicta tempore ullam dolorum ipsum iste, molestiae
-                tempora doloremque?
-              </blockquote>
-              <div>Customer Name</div>
-            </li>
-            <li>
-              <div>stars</div>
-              <blockquote>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                vel maiores dicta tempore ullam dolorum ipsum iste, molestiae
-                tempora doloremque?
-              </blockquote>
-              <div>Customer Name</div>
-            </li>
-            <li>
-              <div>stars</div>
-              <blockquote>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                vel maiores dicta tempore ullam dolorum ipsum iste, molestiae
-                tempora doloremque?
-              </blockquote>
-              <div>Customer Name</div>
-            </li>
-          </ul>
+          <h2 className="welcome-reviews-heading">
+            Made For People that Love Their Time
+          </h2>
+          <div className="welcome-review-wrapper">
+            <div className="welcome-review-stars">⭐️⭐️⭐️⭐️⭐️</div>
+            <blockquote className="welcome-review-quote">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vel
+              maiores dicta tempore ullam dolorum ipsum iste, molestiae tempora
+              doloremque?
+            </blockquote>
+            <div className="welcome-review-name">John S.</div>
+          </div>
+          <div className="welcome-review-wrapper">
+            <div className="welcome-review-stars">⭐️⭐️⭐️⭐️⭐️</div>
+            <blockquote className="welcome-review-quote">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vel
+              maiores dicta tempore ullam dolorum ipsum iste, molestiae tempora
+              doloremque?
+            </blockquote>
+            <div className="welcome-review-name">Jennifer H.</div>
+          </div>
+          <div className="welcome-review-wrapper">
+            <div className="welcome-review-stars">⭐️⭐️⭐️⭐️⭐️</div>
+            <blockquote className="welcome-review-quote">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vel
+              maiores dicta tempore ullam dolorum ipsum iste, molestiae tempora
+              doloremque?
+            </blockquote>
+            <div className="welcome-review-name">Martha S.</div>
+          </div>
+          <div className="welcome-review-wrapper">
+            <div className="welcome-review-stars">⭐️⭐️⭐️⭐️⭐️</div>
+            <blockquote className="welcome-review-quote">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vel
+              maiores dicta tempore ullam dolorum ipsum iste, molestiae tempora
+              doloremque?
+            </blockquote>
+            <div className="welcome-review-name">Carl B.</div>
+          </div>
         </section>
         <section className="welcome-guides">
-          <h2>Customize Food Plans - Food Guides</h2>
-          <p>
+          <h2 className="welcome-guides-heading">
+            Customize Food Plans - Food Guides
+          </h2>
+          <p className="welcome-guides-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
             incidunt eius commodi nam illo maxime temporibus ab earum et
             dignissimos.
           </p>
-          <div>
-            <div></div>
-            <div>
-              <img></img>
+          <div className="welcome-guide-wrapper">
+            <div className="welcome-guide-info">
+              <p className="welcome-guide-info-item">Oil-Free</p>
+              <p className="welcome-guide-info-item">Salt-Free</p>
+              <p className="welcome-guide-info-item">Sugar-Free</p>
             </div>
-            <div></div>
+            <div className="welcome-guide-icons">🫒🧂🍯🥕🥔🥘</div>
+            <div className="welcome-guide-info">
+              <p className="welcome-guide-info-item">WFPB</p>
+              <p className="welcome-guide-info-item">Low-Processed</p>
+              <p className="welcome-guide-info-item">Food Simplicity</p>
+            </div>
           </div>
         </section>
         <section className="welcome-join">
-          <h2>Ready to save time with delicious food?</h2>
-          <button>Join Now</button>
+          <h2 className="welcome-join-heading">
+            Ready to save time with delicious food?
+          </h2>
+          <button className="welcome-join-button">Join Now</button>
         </section>
       </div>
     </div>
