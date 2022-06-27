@@ -1,20 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/icons8-peas-96.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-heading">
-        <h1 className="nav-welcome-heading-title">planEatdo</h1>
-        <img
-          className="nav-welcome-heading-img"
-          src={logo}
-          alt="peas in a pod"
-        />
-      </div>
+      <Logo />
       <div className="footer-site-links">
         <div className="footer-settings">
           <h3 className="footer-settings-heading">Settings</h3>
