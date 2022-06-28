@@ -30,6 +30,7 @@ const Login = ({ submitLogin }) => {
           type={"email"}
           onChange={handleChange}
           value={values.email}
+          required
         />
 
         <label htmlFor="password">Password</label>
@@ -38,9 +39,15 @@ const Login = ({ submitLogin }) => {
           type={"password"}
           onChange={handleChange}
           value={values.password}
+          required
         />
 
-        <button type="submit">Submit</button>
+        <button
+          type="submit"
+          disabled={values.email.length === 0 || values.password.length === 0}
+        >
+          Submit
+        </button>
       </form>
       <div>
         New to planEatdo? <Link to="/signup">Sign Up</Link>

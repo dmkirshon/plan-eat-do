@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Login from "./Login";
 import { MemoryRouter } from "react-router-dom";
@@ -40,7 +40,37 @@ describe("Render the login page with correct elements", () => {
 });
 
 describe("Handle user inputs in the form", () => {
-  it.todo("requires both email and password to be filled out");
+  afterEach(cleanup);
+
+  it("requires both email and password to be filled out for login", () => {
+    const submitLogin = jest.fn();
+    render(<Login submitLogin={submitLogin} />, { wrapper: MemoryRouter });
+
+    const emailField = screen.getByLabelText(/email/i);
+    const passwordField = screen.getByLabelText(/password/i);
+    const submitButton = screen.getByRole("button");
+
+    userEvent.click(submitButton);
+
+    expect(submitLogin).not.toHaveBeenCalled();
+
+    userEvent.type(emailField, "test@email.com");
+    userEvent.click(submitButton);
+
+    expect(submitLogin).not.toHaveBeenCalled();
+
+    userEvent.clear(emailField);
+    userEvent.type(passwordField, "password");
+    userEvent.click(submitButton);
+
+    expect(submitLogin).not.toHaveBeenCalled();
+
+    userEvent.type(emailField, "test@email.com");
+    userEvent.click(submitButton);
+
+    expect(submitLogin).toHaveBeenCalled();
+  });
+
   it("should allow the user to submit their credentials", () => {
     const submitLogin = jest.fn();
     render(<Login submitLogin={submitLogin} />, { wrapper: MemoryRouter });
