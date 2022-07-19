@@ -1,5 +1,6 @@
 import {
   Navigate,
+  Outlet,
   Route,
   Routes,
   useLocation,
@@ -11,7 +12,7 @@ import NoMatch from "./routes/NoMatch/NoMatch";
 import Welcome from "./routes/Welcome/Welcome";
 import Login from "./routes/Login/Login";
 import SignUp from "./routes/Signup/SignUp";
-import Do from "./routes/Main/Do";
+import { Do, NavMain } from "./routes/Main";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 
@@ -23,6 +24,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
+import NavWelcome from "./routes/Welcome/NavWelcome";
 
 function App() {
   const navigate = useNavigate();
@@ -64,10 +66,27 @@ function App() {
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<Welcome />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <NavWelcome />
+              <Welcome />
+            </>
+          }
+        />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login submitLogin={submitLogin} />} />
-        <Route path="/do" element={<Do />} />
+        <Route
+          element={
+            <>
+              <NavMain />
+              <Outlet />
+            </>
+          }
+        >
+          <Route path="/do" element={<Do />} />
+        </Route>
         <Route path="*" element={<NoMatch />} />
       </Routes>
       <Footer />
