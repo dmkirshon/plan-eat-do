@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/NoMatch.css";
+import "./style/NoMatch.css";
 
 const NoMatch = () => {
   //utilized https://codepen.io/genarocolusso/pen/XWbGMLp

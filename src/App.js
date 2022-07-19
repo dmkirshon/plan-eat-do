@@ -7,11 +7,11 @@ import {
 } from "react-router-dom";
 import "./App.css";
 
-import NoMatch from "./routes/NoMatch";
-import Welcome from "./routes/Welcome";
-import Login from "./routes/Login";
-import SignUp from "./routes/SignUp";
-import Do from "./routes/Do";
+import NoMatch from "./routes/NoMatch/NoMatch";
+import Welcome from "./routes/Welcome/Welcome";
+import Login from "./routes/Login/Login";
+import SignUp from "./routes/Signup/SignUp";
+import Do from "./routes/Main/Do";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 

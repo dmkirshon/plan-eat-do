@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../components/Logo";
+import Logo from "../../components/Logo";
 
 const Login = ({ submitLogin }) => {
   const [values, setValues] = useState({

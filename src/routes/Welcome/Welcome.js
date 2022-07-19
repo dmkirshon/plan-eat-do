@@ -1,5 +1,6 @@
 import React from "react";
-import NavWelcome from "../components/NavWelcome";
+import NavWelcome from "./NavWelcome";
+
 const Welcome = () => {
   return (
     <div className="welcome">
