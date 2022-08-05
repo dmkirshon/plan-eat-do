@@ -1,7 +1,11 @@
 import React from "react";
 
-const UserAvatar = () => {
-  return <div className="nav-main-user"></div>;
+const UserAvatar = ({ currentUser }) => {
+  return (
+    <div className="user-avatar" data-testid="user-avatar">
+      <p className="user-avatar-email">{currentUser.email}</p>
+    </div>
+  );
 };
 
 export default UserAvatar;
