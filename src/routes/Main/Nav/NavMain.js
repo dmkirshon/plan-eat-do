@@ -9,7 +9,7 @@ const NavMain = () => {
     <div className="nav-main">
       <Logo />
       <NavLinks />
-      <UserAvatar />
+      <UserAvatar currentUser={{ email: "test@test" }} />
       <LogoutButton />
     </div>
   );

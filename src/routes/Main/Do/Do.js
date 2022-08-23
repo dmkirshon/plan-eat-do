@@ -1,7 +1,7 @@
 import React from "react";
 
 const Do = () => {
-  return <div></div>;
+  return <div>Do</div>;
 };
 
 export default Do;
